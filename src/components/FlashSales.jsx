@@ -19,12 +19,12 @@ const FlashSales = () => {
             <h1 className="text-xl font-bold">Flash Sales</h1>
           </div>
 
-          <div>
+          {/* <div>
             <button className="w-[30px] h-[30px] bg-gray-500 rounded-full font-bold">
               {"<-"}
             </button>
             <button>{"->"}</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
