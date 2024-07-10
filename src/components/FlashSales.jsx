@@ -1,4 +1,5 @@
 import { useFetch } from "../hooks/hook";
+import Products from "./Products";
 const FlashSales = () => {
   const { data, loading, refetch } = useFetch({
     methods: "get",
@@ -12,19 +13,20 @@ const FlashSales = () => {
       <div className="flex gap-2 pt-10 flex-col">
         <div className="flex gap-2">
           <span className="inline w-3 h-6 bg-[#DB4444] rounded-sm"></span>
-          <h4 className="text-[#DB4444]">Todays&apos;s</h4>
+          <h4 className="text-[#DB4444]">Our Products</h4>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col gap-4">
           <div>
-            <h1 className="text-xl font-bold">Flash Sales</h1>
+            <h1 className="text-xl font-bold">Explore Our Products</h1>
           </div>
 
-          {/* <div>
-            <button className="w-[30px] h-[30px] bg-gray-500 rounded-full font-bold">
-              {"<-"}
-            </button>
-            <button>{"->"}</button>
-          </div> */}
+          <div className="flex flex-wrap gap-2">
+            {data
+              .filter((item) => item.images.length > 0)
+              .map((product) => (
+                <Products key={product.id} {...product} />
+              ))}
+          </div>
         </div>
       </div>
     </div>
