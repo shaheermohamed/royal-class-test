@@ -80,7 +80,7 @@ const FlashSales = () => {
           )}
           <button
             onClick={handleViewAll}
-            className="bg-[#DB4444] text-white py-2 px-4 rounded mt-4 self-center"
+            className="bg-[#DB4444] text-white py-4 px-10 rounded mt-4 self-center"
           >
             {viewAll ? "Show Less" : "View All Products"}
           </button>
