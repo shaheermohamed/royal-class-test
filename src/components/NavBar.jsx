@@ -20,25 +20,27 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between p-6 items-center w-full px-[100px] border-b border-grey-500 ">
+      <div className="flex justify-between pt-6 pb-2 items-center w-full px-[100px] border-b border-grey-500 ">
         <div>
           <h2 className="font-bold">Royal Class</h2>
         </div>
 
         <div className="flex gap-8">
-          <h4>Home</h4>
-          <h4>Contact</h4>
-          <h4>About</h4>
-          <h4>Sign Up</h4>
+          <h4 className="underline decoration-gray-200 text-sm font-[400]">
+            Home
+          </h4>
+          <h4 className="text-sm font-[400]">Contact</h4>
+          <h4 className="text-sm font-[400]">About</h4>
+          <h4 className="text-sm font-[400]">Sign Up</h4>
         </div>
 
-        <div className="flex gap-2 items-center">
-          <div className="flex bg-[#F5F5F5] items-center rounded-md">
+        <div className="flex gap-4 items-center">
+          <div className="pr-2 flex bg-[#F5F5F5] items-center rounded-sm ">
             <input
-              className="p-2 bg-[#F5F5F5] rounded-md h-7 w-[200px]"
+              className="flex pb-1 justify-center text-center bg-[#F5F5F5] rounded-md h-7 w-[180px] placeholder:text-[0.8rem]"
               placeholder="What are you looking for?"
             />
-            <img src={search} alt="search" className="h-5 w-5" />
+            <img src={search} alt="search" className="h-4 w-4" />
           </div>
 
           <img src={wishlist} alt="search" className="h-5 w-5" />
